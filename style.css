@@ -1,0 +1,88 @@
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 2em;
+}
+
+h1 {
+  font-style: italic;
+  color: #373fff;
+}
+body {
+  background: rgb(0, 0, 131);
+}
+
+@keyframes glow {
+  0% {background: rgba(238, 130, 238);}
+  50% {background: rgba(60, 179, 113);}
+  100% {background: rgba(106, 90, 205);}
+}
+@keyframes ball1 {
+  0% {left: 60%; top: 50%;}
+  50% {left: 10%; top: 45%;}
+  100% {left: 60%; top: 50%;}
+}
+@keyframes ball2 {
+  0% {left: 15%; top: 90%;}
+  50% {left: 55%; top: 80%;}
+  100% {left: 15%; top: 90%;}
+}
+
+@keyframes ball3 {
+  0% {left: 25%; top: 20%;}
+  50% {left: 40%; top: 40%;}
+  100% {left: 25%; top: 20%;}
+}
+
+@keyframes ball4 {
+  0% {left: 80%; top: 70%;}
+  50% {left: 30%; top: 40%;}
+  100% {left: 80%; top: 70%;}
+}
+
+.orb:hover {
+  animation-play-state: running, paused;
+  cursor: wait;
+  background-color: white;
+}
+
+.orb {
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  background-color: rgba(255, 0, 0);
+  border-radius: 50%;
+  filter: blur(3px);
+}
+
+.orb:nth-child(1) {
+  left: 60%;
+  top: 50%;
+  animation-name: glow, ball1;
+  animation-duration: 1s, 5s;
+  animation-timing-function: ease-in-out, ease-in-out;
+  animation-iteration-count: infinite, infinite;
+  animation-delay: 1s, 2s;
+}
+
+.orb:nth-child(2) {
+  left: 15%;
+  top: 90%;
+  animation-name: glow, ball2;
+  animation-duration: 1s, 5s;
+  animation-timing-function: ease-in-out, ease-in-out;
+  animation-iteration-count: infinite, infinite;
+  animation-delay: 1s, 2s;
+}
+
+.orb:nth-child(3) {
+  left: 25%;
+  top: 20%;
+  animation-name: glow, ball3;
+  animation-duration: 1s, 5s;
+  animation-timing-function: ease-in-out, ease-in-out;
+  animation-iteration-count: infinite, infinite;
+  animation-delay: 1s, 2s;
+}
+
+.orb:nth-child(4) {
+  left: 80%;
